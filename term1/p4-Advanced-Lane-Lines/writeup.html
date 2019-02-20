@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <style>
+/*--------------------------------------------------------------------------------------------- * Copyright (c) Microsoft Corporation. All rights reserved. * Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/ body { font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback"; font-size: 14px; padding: 0 12px; line-height: 22px; word-wrap: break-word; } body.scrollBeyondLastLine { margin-bottom: calc(100vh - 22px); } body.showEditorSelection .code-line { position: relative; } body.showEditorSelection .code-active-line:before, body.showEditorSelection .code-line:hover:before { content: ""; display: block; position: absolute; top: 0; left: -12px; height: 100%; } body.showEditorSelection li.code-active-line:before, body.showEditorSelection li.code-line:hover:before { left: -30px; } .vscode-light.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(0, 0, 0, 0.15); } .vscode-light.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(0, 0, 0, 0.40); } .vscode-dark.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 255, 255, 0.4); } .vscode-dark.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 255, 255, 0.60); } .vscode-high-contrast.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 160, 0, 0.7); } .vscode-high-contrast.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 160, 0, 1); } img { max-width: 100%; max-height: 100%; } a { color: #4080D0; text-decoration: none; } a:focus, input:focus, select:focus, textarea:focus { outline: 1px solid -webkit-focus-ring-color; outline-offset: -1px; } hr { border: 0; height: 2px; border-bottom: 2px solid; } h1 { padding-bottom: 0.3em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; } h1, h2, h3 { font-weight: normal; } h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; line-height: auto; } a:hover { color: #4080D0; text-decoration: underline; } table { border-collapse: collapse; } table > thead > tr > th { text-align: left; border-bottom: 1px solid; } table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td { padding: 5px 10px; } table > tbody > tr + tr > td { border-top: 1px solid; } blockquote { margin: 0 7px 0 5px; padding: 0 16px 0 10px; border-left: 5px solid; } code { font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; font-size: 14px; line-height: 19px; } body.wordWrap pre { white-space: pre-wrap; } .mac code { font-size: 12px; line-height: 18px; } code > div { padding: 16px; border-radius: 3px; overflow: auto; } /** Theming */ .vscode-light { color: rgb(30, 30, 30); } .vscode-dark { color: #DDD; } .vscode-high-contrast { color: white; } .vscode-light code { color: #A31515; } .vscode-dark code { color: #D7BA7D; } .vscode-light code > div { background-color: rgba(220, 220, 220, 0.4); } .vscode-dark code > div { background-color: rgba(10, 10, 10, 0.4); } .vscode-high-contrast code > div { background-color: rgb(0, 0, 0); } .vscode-high-contrast h1 { border-color: rgb(0, 0, 0); } .vscode-light table > thead > tr > th { border-color: rgba(0, 0, 0, 0.69); } .vscode-dark table > thead > tr > th { border-color: rgba(255, 255, 255, 0.69); } .vscode-light h1, .vscode-light hr, .vscode-light table > tbody > tr + tr > td { border-color: rgba(0, 0, 0, 0.18); } .vscode-dark h1, .vscode-dark hr, .vscode-dark table > tbody > tr + tr > td { border-color: rgba(255, 255, 255, 0.18); } .vscode-light blockquote, .vscode-dark blockquote { background: rgba(127, 127, 127, 0.1); border-color: rgba(0, 122, 204, 0.5); } .vscode-high-contrast blockquote { background: transparent; border-color: #fff; }
+</style>
+<style>
+/* Tomorrow Theme */ /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */ /* Original theme - https://github.com/chriskempson/tomorrow-theme */ /* Tomorrow Comment */ .hljs-comment, .hljs-quote { color: #8e908c; } /* Tomorrow Red */ .hljs-variable, .hljs-template-variable, .hljs-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-deletion { color: #c82829; } /* Tomorrow Orange */ .hljs-number, .hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-params, .hljs-meta, .hljs-link { color: #f5871f; } /* Tomorrow Yellow */ .hljs-attribute { color: #eab700; } /* Tomorrow Green */ .hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition { color: #718c00; } /* Tomorrow Blue */ .hljs-title, .hljs-section { color: #4271ae; } /* Tomorrow Purple */ .hljs-keyword, .hljs-selector-tag { color: #8959a8; } .hljs { display: block; overflow-x: auto; color: #4d4d4c; padding: 0.5em; } .hljs-emphasis { font-style: italic; } .hljs-strong { font-weight: bold; }
+</style>
+<style>
+ul.contains-task-list { padding-left: 0; } ul ul.contains-task-list { padding-left: 40px; } .task-list-item { list-style-type: none; } .task-list-item-checkbox { vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="advanced-lane-finding-project">Advanced Lane Finding Project</h1>
+<p>The goals / steps of this project are the following:</p>
+<ul>
+<li>Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.</li>
+<li>Apply a distortion correction to raw images.</li>
+<li>Use color transforms, gradients, etc., to create a thresholded binary image.</li>
+<li>Apply a perspective transform to rectify binary image (&quot;birds-eye view&quot;).</li>
+<li>Detect lane pixels and fit to find the lane boundary.</li>
+<li>Determine the curvature of the lane and vehicle position with respect to center.</li>
+<li>Warp the detected lane boundaries back onto the original image.</li>
+<li>Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.</li>
+</ul>
+<h3 id="here-i-will-consider-the-rubric-points-individually-and-describe-how-i-addressed-each-point-in-my-implementation">Here I will consider the rubric points individually and describe how I addressed each point in my implementation.</h3>
+<hr>
+<h3 id="camera-calibration">Camera Calibration</h3>
+<h4 id="1-briefly-state-how-you-computed-the-camera-matrix-and-distortion-coefficients-provide-an-example-of-a-distortion-corrected-calibration-image">1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image.</h4>
+<p>The code for this step is contained in the first code cell of the IPython notebook <code>adv-lane-lines.ipynb</code>.</p>
+<p>I start by preparing &quot;object points&quot;, which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, <code>objp</code> is just a replicated array of coordinates, and <code>objpoints</code> will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  <code>imgpoints</code> will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.</p>
+<p>I then used the output <code>objpoints</code> and <code>imgpoints</code> to compute the camera calibration and distortion coefficients using the <code>cv2.calibrateCamera()</code> function.  I applied this distortion correction to the test image using the <code>cv2.undistort()</code> function and obtained this result:</p>
+<p><img src="file:///e%3A/Projects/Uda/CarND_Uda/projects/p4-Advanced-Lane-Lines/CarND-Advanced-Lane-Lines/examples/undistort_output.png" alt="alt text" title="Undistorted"></p>
+<h3 id="pipeline-single-images">Pipeline (single images)</h3>
+<h4 id="1-provide-an-example-of-a-distortion-corrected-image">1. Provide an example of a distortion-corrected image.</h4>
+<p>To demonstrate this step, I will describe how I apply the distortion correction to images.</p>
+<h4 id="2-describe-how-and-identify-where-in-your-code-you-used-color-transforms-gradients-or-other-methods-to-create-a-thresholded-binary-image-provide-an-example-of-a-binary-image-result">2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.</h4>
+<p>I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at <code>mag_thresh</code> in <code>adv-lane-lines.ipynb</code>).  Here's an example of my output for this step.</p>
+<p><img src="file:///e%3A/Projects/Uda/CarND_Uda/projects/p4-Advanced-Lane-Lines/CarND-Advanced-Lane-Lines/writeup_imgs/threshold.png" alt=""></p>
+<h4 id="3-describe-how-and-identify-where-in-your-code-you-performed-a-perspective-transform-and-provide-an-example-of-a-transformed-image">3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.</h4>
+<p>The code for my perspective transform includes a function called <code>perspective()</code>, which appears in <code>adv-lane-lines.ipynb</code>.  The <code>perspective()</code> function takes as inputs an image (<code>img</code>).  I chose the hardcode the source and destination points in the following manner:</p>
+<pre class="hljs"><code><div>src_pts = np.array([[<span class="hljs-number">280</span>,<span class="hljs-number">670</span>],[<span class="hljs-number">580</span>,<span class="hljs-number">460</span>],[<span class="hljs-number">700</span>,<span class="hljs-number">460</span>],[<span class="hljs-number">1000</span>,<span class="hljs-number">670</span>]], np.int32)
+dst_pts = np.array([[<span class="hljs-number">300</span>,<span class="hljs-number">720</span>],[<span class="hljs-number">300</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">980</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">980</span>,<span class="hljs-number">720</span>]], np.int32)
+
+src = np.float32(src_pts)
+dst = np.float32(dst_pts)
+</div></code></pre>
+<p>I verified that my perspective transform was working as expected by drawing the <code>src</code> and <code>dst</code> points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.</p>
+<p><img src="file:///e%3A/Projects/Uda/CarND_Uda/projects/p4-Advanced-Lane-Lines/CarND-Advanced-Lane-Lines/writeup_imgs/birdview.png" alt=""></p>
+<h4 id="4-describe-how-and-identify-where-in-your-code-you-identified-lane-line-pixels-and-fit-their-positions-with-a-polynomial">4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?</h4>
+<p>I implemented this step in my code in <code>adv-lane-lines.ipynb</code> in the function <code>get_line_fits()</code>.</p>
+<p><img src="file:///e%3A/Projects/Uda/CarND_Uda/projects/p4-Advanced-Lane-Lines/CarND-Advanced-Lane-Lines/examples/color_fit_lines.jpg" alt="alt text" title="Fit Visual"></p>
+<h4 id="5-describe-how-and-identify-where-in-your-code-you-calculated-the-radius-of-curvature-of-the-lane-and-the-position-of-the-vehicle-with-respect-to-center">5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.</h4>
+<p>I did this in <code>find_line()</code> in <code>adv-lane-lines.ipynb</code></p>
+<h4 id="6-provide-an-example-image-of-your-result-plotted-back-down-onto-the-road-such-that-the-lane-area-is-identified-clearly">6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.</h4>
+<p>I implemented this step in my code in <code>adv-lane-lines.ipynb</code> in the function <code>back_to_oimg()</code>.  Here is an example of my result on a test image:</p>
+<p><img src="file:///e%3A/Projects/Uda/CarND_Uda/projects/p4-Advanced-Lane-Lines/CarND-Advanced-Lane-Lines/writeup_imgs/result.jpg" alt=""></p>
+<hr>
+<h3 id="pipeline-video">Pipeline (video)</h3>
+<h4 id="1-provide-a-link-to-your-final-video-output-your-pipeline-should-perform-reasonably-well-on-the-entire-project-video-wobbly-lines-are-ok-but-no-catastrophic-failures-that-would-cause-the-car-to-drive-off-the-road">1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).</h4>
+<p>The video is uploaded in folder.</p>
+<hr>
+<h3 id="discussion">Discussion</h3>
+<h4 id="1-briefly-discuss-any-problems-issues-you-faced-in-your-implementation-of-this-project-where-will-your-pipeline-likely-fail-what-could-you-do-to-make-it-more-robust">1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?</h4>
+<p>There are some problems to find lanes from dark to light. Maybe I can try to use both hsl and hsv to get a more clear boundary of lines, I will try next.</p>
+
+    </body>
+    </html>

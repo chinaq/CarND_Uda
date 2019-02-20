@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/e/Projects/Uda/CarND_Uda/term3/CarND-Path-Planning-Project-master/src/vehicle.cpp
+algorithm
+-
+iostream
+-
+vehicle.h
+/mnt/e/Projects/Uda/CarND_Uda/term3/CarND-Path-Planning-Project-master/src/vehicle.h
+cmath
+-
+map
+-
+string
+-
+iterator
+-
+
+/mnt/e/Projects/Uda/CarND_Uda/term3/CarND-Path-Planning-Project-master/src/vehicle.h
+iostream
+-
+random
+-
+vector
+-
+map
+-
+string
+-
+
+/mnt/e/Projects/Uda/CarND_Uda/term3/CarND-Path-Planning-Project-master/test/src/vehicle_test.cpp
+../../src/vehicle.cpp
+/mnt/e/Projects/Uda/CarND_Uda/term3/CarND-Path-Planning-Project-master/src/vehicle.cpp
+gtest/gtest.h
+-
+

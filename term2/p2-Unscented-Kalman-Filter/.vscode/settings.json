@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "geometry": "cpp",
+        "iosfwd": "cpp"
+    }
+}
